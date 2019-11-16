@@ -1,0 +1,110 @@
+.main {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.greeting {
+    display: flex;
+    flex-direction: column;
+}
+.greeting span:nth-child(1) {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+.greeting span:nth-child(2),
+.greeting span:nth-child(2) span {
+    font-weight: 700;
+    font-stretch: normal;
+    font-size: 40px;
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 0;
+}
+.greeting span:nth-child(2) span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #09d3ac;
+    bottom: 0;
+    z-index: -1;
+}
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+}
+.photo {
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.image {
+    height: 400px;
+    width: 300px;
+    background: url("../../img/avatar2.jpg") center no-repeat;
+    background-size: cover;
+    transition: transform 0.2s;
+    z-index: 1;
+}
+.photo .image::before {
+    content: "";
+    position: absolute;
+    height: 430px;
+    width: 320px;
+    border: 5px solid #09d3ac;
+    left: -15px;
+    top: -20px;
+    z-index: -1;
+}
+@media screen and (max-width: 630px) {
+    .image {
+        height:360px;
+        width: 260px;
+    }
+    .photo .image:before {
+        height: 390px;
+        width: 280px;
+    }
+    .main {
+        padding: 60px 0;
+    }
+}
+@media screen and (max-width: 360px) {
+    .main {
+        padding-top: 80px;
+    }
+    .greeting span:nth-child(2),
+    .greeting span:nth-child(2) span {
+        font-weight: 700;
+        font-stretch: normal;
+        font-size: 30px;
+        line-height: 1.2;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 0;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .greeting span:nth-child(2) span:before {
+        height: 15px;
+        bottom: 0px;
+    }
+    .photo .image::before {
+        width: 280px;
+    }
+}

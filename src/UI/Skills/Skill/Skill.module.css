@@ -1,0 +1,111 @@
+.skill {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 10px 70px;
+    position: relative;
+}
+.card {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    perspective: 1000px;
+    margin: 0 0 30px;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.back {
+    transform: rotateY(180deg);
+}
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+.card:hover .back {
+    transform: rotateY(360deg);
+}
+.frontContent {
+    transform: rotate(45deg);
+    background-color: #09d3ac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    color: #1f1f20;
+    box-shadow: 0 0 20px #09d3ac;
+}
+.content {
+    font-size: 60px;
+    transform: rotate(-45deg);
+}
+.backContent {
+    transform: rotate(45deg);
+    background-color: #1f1f20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    color: #09d3ac;
+    border: #09d3ac 1px solid;
+    box-shadow: 0 0 20px #09d3ac;
+    transition: 1s;
+}
+.skillTitle {
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.description {
+    text-align: center;
+}
+@media screen and (max-width: 630px) {
+    .skill {
+        width: 100%;
+    }
+    .front {
+        height: 60px;
+        width: 60px;
+    }
+    .content {
+        font-size: 50px;
+    }
+    .skillTitle {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 320px) {
+    .front {
+        height: 40px;
+        width: 40px;
+    }
+    .content {
+        font-size: 30px;
+    }
+    .skillTitle {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .description {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    background-color: #252527;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

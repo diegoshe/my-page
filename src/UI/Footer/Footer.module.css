@@ -1,0 +1,86 @@
+.footer {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 10px 0 ;
+    position: relative;
+}
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    font-size: 20px;
+}
+.ico {
+    color: white;
+}
+.gh {
+    font-size: 42px;
+}
+.linkedIn:hover {
+    color: #0077b5;
+    border-color: #0077b5;
+    box-shadow: 0 0 25px #0077b5, 0 0 40px #0077b5;
+}
+.fb:hover {
+    color: #4267b2;
+    border-color: #4267b2;
+    box-shadow: 0 0 25px #4267b2, 0 0 40px #4267b2;
+}
+.gh:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 25px #ffffff, 0 0 35px #ffffff;
+}
+.telegram:hover {
+    color: #34a9e5;
+    border-color: #34a9e5;
+    box-shadow: 0 0 25px #34a9e5, 0 0 40px #34a9e5;
+}
+.socialIcon a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+@media screen and (max-width: 630px) {
+    .socialBlock {
+        width: 100%;
+    }
+    .footer {
+        padding: 40px 0 10px 0 ;
+    }
+}
+@media screen and (max-width: 480px) {
+    .socialIcon {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .gh {
+        font-size: 32px;
+    }
+}
+
